@@ -11,10 +11,14 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
+:root {
+    --Primary-color-black: #152427;
+}
+
 /* Common */
 
 a {
-    text-decoration: none;
+    text-decoration: none   ;
 }
 
 .container {
@@ -24,9 +28,12 @@ a {
 }
 
 .btn {
-    display: inline-block;
-    text-align: center;
-    width: 173px;   
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: var(--width);  
+    --width: 173;
     height: 57px;
     color: #fff;
     font-family: "Public Sans";
@@ -307,3 +314,127 @@ a {
     letter-spacing: 1.995px;
     column-gap: 14px;
 }
+
+.services {
+    margin-top: 106px;
+}
+
+.section--title {
+    margin-left: 46px;
+    position: relative;
+    color: #152427;
+    font-family: Poppins;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.62;
+}
+
+.section--title::before {
+    position: absolute;
+    top: 9px;
+    left: -46px;
+    display: block;
+    content: "";
+    width: 25px;
+    height: 1px;
+    background-color: var(--Primary-color-black);
+}
+
+.section--heading {
+    margin-top: 12px;
+    width: 520px;
+    position: relative;
+    color: var(--Primary-color-black, #152427);
+    font-family: Poppins;
+    font-size: 4.2rem;
+    font-weight: 600;
+    line-height: 1.23;
+}
+
+.section--heading::after {
+    position: absolute;
+    bottom: 19px;
+    right: 109px;
+    content: "";
+    display: block;
+    width: 66px;
+    height: 2px;
+    background-color: var(--Primary-color-black);
+}
+
+.services--row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.services__cta {
+    display: flex;
+    column-gap: 17px;
+}
+
+.services__btn {
+    --width: 54px;
+    height: 54px;
+    border: none;
+    padding: 0;
+    transition: 0.25s;
+}
+
+.services__btn:hover {
+    background-color: #E2EDDF;
+    color: black;
+}
+
+.arrow--rotation {
+    transform:rotate(180deg);
+}
+
+.services-list {
+    margin-top: 76px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 16px;
+}
+
+.services-items {
+    border-radius: 20px;
+    background: #FFF;
+    transition: 0.25s;
+}
+
+.services-items:hover {
+    box-shadow: -6px 9px 64px -4px rgba(118, 118, 118, 0.25);
+}
+
+.services-items__img {
+    display: block;
+    width: 370px;
+    height: 318px;
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.services-items__content {
+    margin: 24px 0 24px 18px;
+}
+
+.services-items__heading {
+    color: var(--Primary-color-black, #152427);
+    font-family: Poppins;
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.services-items__desc {
+    width: 268px;
+    margin-top: 18px;
+    color: var(--text-color-light-gray, #7D8188);
+    font-family: Poppins;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.71;
+}
+
